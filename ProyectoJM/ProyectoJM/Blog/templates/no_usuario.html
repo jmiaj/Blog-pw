@@ -1,0 +1,6 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block content %}
+  <p> Error en el login. El usuario y la contraseña no coinciden o no existen. </p>
+  <a href="{% url 'appJM:login' %}"><button type="button">Intentalo de nuevo</button></a>
+{% endblock %}

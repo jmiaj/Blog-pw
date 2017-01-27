@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{%block content%}
+
+	<h1>{{ entrada.titulo }}</h1>
+	<p> {{ entrada.cuerpo }}</p>
+	<div class="fecha"> {{ entrada.fecha }}</div>
+    {% if perms.article.can_change %}
+		<a href="{% url 'home:editar' entrada.id %}" class="btn btn-primary">Editar</a>
+    {% endif %}
+    {% if perms.article.can_delete %}
+    	<a href="{% url 'home:eliminar' entrada.id %}" class="btn btn-danger">Eliminar</a>
+	{% endif %}
+
+	<a href="{% url 'home:comentario' entrada.id %}" class="btn btn-primary">Comentar</a>
+
+    {% if listadoComentarios %}
+    <h3>Comentarios</h3>
+		<ul>
+			{% for comentario in listadoComentarios %}
+				
+				<h4>Usuario: {{ comentario.author }}</h4>
+				<p>{{comentario.Texto_Comentario}}</p>
+				<p>
+	   				<small class="fecha">{{comentario.date}}</small>
+				</p>
+				<br>
+			{% endfor %}
+		</ul>
+	{% else %}
+		<h1>Sin Comentarios</h1>
+		<p>La base de datos por el momento no tiene comentarios.</p>
+	{% endif %}
+
+{% endblock %}
