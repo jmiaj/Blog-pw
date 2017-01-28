@@ -155,10 +155,8 @@ def newUser(request):
 	else:
 		#si el method es GET, instanciamos un objeto RegistroUsuario vacio
 		form=UserCreationForm()
-	# Creamos el contexto	
-	context = {'form':form}
 	# Y mostramos los datos
-	return render(request, 'registro.html', context)
+	return render(request, 'registro.html', {'form':form, 'listadoTitulos': ListadoTitulos})
 
 
 
@@ -182,7 +180,7 @@ def acceso(request):
 				return render(request, 'no_usuario.html')
 	else:
 		form = AuthenticationForm()
-	return render(request, 'login.html', {'form': form})
+	return render(request, 'login.html', {'form': form, 'listadoTitulos': ListadoTitulos})
 
 @login_required(login_url= 'login')
 def VistaLogout(request):
