@@ -1,6 +1,6 @@
 body { 
     font-family: "Helvetica Neue", "Open Sans", 'Roboto', sans-serif;
-  background-color: #f3efe0;
+  background-color: white;
   color: #72787E;
     line-height: 1.5;
     font-size: 20px;
@@ -33,43 +33,25 @@ a {
 }
 
 .navbar {
-  background-color: white;
+  background-color: olivedrab;
   border-bottom: 1px solid rgba(231, 231, 231, 0.65);
-  color: #333b41;
+  color: black;
 }
 
-.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
-    color: #ee7c1b;
-    background-color: white;
-}
-
-.navbar-inverse .navbar-nav > li > a {
-    color: #333b41;
-}
-
-.navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-nav > li > a:focus {
-    color: #ee7c1b;
-    background-color: transparent;
-}
-
-.navbar-inverse .navbar-brand:hover, .navbar-inverse .navbar-brand:focus {
-    color: #ee7c1b;
-    background-color: transparent;
-}
 
 footer {
     background-color: white;
-    color: #89898A;
+    color: olivedrab;
     font-size: 14px;
     margin-top: 20px;
 }
 
 .naranja{
-    color: #ee7c1b;    
+    color: olivedrab;    
 }
 
 footer a{
-    color:#007aff !important;
+    color:olivedrab !important;
 }
 
 .navbar-brand {
@@ -85,12 +67,12 @@ footer a{
 
 .iconPageMasMenos{
     font-size:larger;
-    color: #007aff;
+    color: olivedrab;
 }
 
 .iconPageMasMenos:hover{
     font-size:larger;
-    color: #ea9629;
+    color: olivedrab;
     text-decoration: none;
 }
 
